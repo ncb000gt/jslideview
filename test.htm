@@ -1,0 +1,32 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h5 id="dir"></h5>
+    <ul id="list">
+    </ul>
+    <span onClick="lslider.slideBackward();">Back 1</span>
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="sliding_tree.js"></script>
+    <script type="text/javascript">
+      var lslider = new list_slider();
+      lslider.init($("#list"), {
+      height: 500,
+      label_element: $("#dir"),
+      data: {
+      a: { href: "/hi", label: "Hi",
+      children: {
+      b: { href: "/bye", label: "Bye" },
+      c: { href: "/cat", label: "Cat",
+      children: {
+      d: { href: "/done", label: "Done" },
+      e: { href: "/eff", label: "Eff" }
+      }
+      }
+      }
+      }
+      }
+      });
+    </script>
+  </body>
+</html>
